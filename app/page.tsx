@@ -102,7 +102,7 @@ export default function Home() {
                 <Link href="/summary">
                   <Button
                     size="lg"
-                    className="bg-gradient-to-l from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 transition-all duration-300 shadow-md hover:shadow-lg"
+                    className="w-full bg-gradient-to-l from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 transition-all duration-300 shadow-md hover:shadow-lg"
                   >
                     اطلب الآن
                   </Button>
@@ -138,16 +138,16 @@ export default function Home() {
               </div>
             </div>
             <div className="relative mx-auto lg:mr-0 lg:ml-auto">
-              <div className="relative w-[400px] h-[100px] bg-gradient-to-br from-red-500 to-red-600 rounded-full opacity-10 blur-3xl absolute -top-10 -right-10"></div>
+              <div className="relative w-[320px] h-[100px] bg-gradient-to-br from-red-500 to-red-600 rounded-full opacity-10 blur-3xl absolute -top-10 -right-10"></div>
               <div className="relative z-10 bg-white p-2 rounded-2xl shadow-2xl transform transition-transform hover:scale-[1.02] duration-500">
                 <img
                   src="/2.png"
                   alt="اسطوانات الغاز"
-                  width={300}
-                  height={300}
+                  width={320}
+                  height={320}
                   className="rounded-xl object-cover"
                 />
-                <div className="absolute -bottom-6 -left-8 bg-white p-4 rounded-lg shadow-lg">
+                <div className=" bg-white p-4 rounded-lg shadow-lg">
                   <div className="flex items-center gap-2">
                     <div className="bg-yellow-100 p-2 rounded-full">
                       <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />

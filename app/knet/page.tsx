@@ -179,7 +179,7 @@ const Payment = (props: any) => {
         <div className="madd" />
         <img src="./pc.jpg" className="-" alt="logo" />
 
-        <div id="PayPageEntry" >
+        <div id="PayPageEntry" dir='ltr' >
 
           <div className="container">
 
