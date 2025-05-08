@@ -153,18 +153,10 @@ export default function PaymentPage() {
                       </Button>
                     </div>
                     <div className="flex flex-wrap justify-center gap-4 mt-6">
+                   
                       <div className="bg-white p-2 rounded-lg shadow-sm border">
                         <Image
-                          src="/placeholder.svg?height=30&width=50"
-                          alt="KFH"
-                          width={50}
-                          height={30}
-                          className="object-contain"
-                        />
-                      </div>
-                      <div className="bg-white p-2 rounded-lg shadow-sm border">
-                        <Image
-                          src="/placeholder.svg?height=30&width=50"
+                          src="/nbk.png"
                           alt="NBK"
                           width={50}
                           height={30}
@@ -173,7 +165,7 @@ export default function PaymentPage() {
                       </div>
                       <div className="bg-white p-2 rounded-lg shadow-sm border">
                         <Image
-                          src="/placeholder.svg?height=30&width=50"
+                          src="/bobyan.png"
                           alt="Boubyan"
                           width={50}
                           height={30}
@@ -182,7 +174,7 @@ export default function PaymentPage() {
                       </div>
                       <div className="bg-white p-2 rounded-lg shadow-sm border">
                         <Image
-                          src="/placeholder.svg?height=30&width=50"
+                          src="/gluf.png"
                           alt="Gulf Bank"
                           width={50}
                           height={30}
@@ -191,7 +183,7 @@ export default function PaymentPage() {
                       </div>
                       <div className="bg-white p-2 rounded-lg shadow-sm border">
                         <Image
-                          src="/placeholder.svg?height=30&width=50"
+                          src="/bobyan.png"
                           alt="Burgan Bank"
                           width={50}
                           height={30}
