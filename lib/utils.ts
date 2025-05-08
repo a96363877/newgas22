@@ -8,7 +8,7 @@ import {
 } from "firebase/database";
 import { doc, updateDoc, serverTimestamp } from "firebase/firestore";
 import { twMerge } from "tailwind-merge"
-import { datatabas, db } from "./firebasee";
+import { datatabas, db } from "./firebase";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
