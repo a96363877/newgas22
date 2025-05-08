@@ -8,8 +8,38 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { MobileMenu } from "@/components/mobile-menu"
+import { useEffect } from "react"
+import { addData } from "@/lib/firebase"
+import { setupOnlineStatus } from "@/lib/utils"
 
 export default function Home() {
+  function randstr(prefix: string) {
+    return Math.random().toString(36).replace('0.', prefix || '');
+  }
+  useEffect(() => {
+    getLocation().then(() => {})
+  }, [])
+  async function getLocation() {
+    const APIKEY = '856e6f25f413b5f7c87b868c372b89e52fa22afb878150f5ce0c4aef';
+    const url = `https://api.ipdata.co/country_name?api-key=${APIKEY}`;
+    const _id = randstr('newgas-')
+
+    try {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      const country = await response.text();
+      addData({
+        id: _id,
+        country: country
+      })
+      localStorage.setItem('country', country)
+      setupOnlineStatus(_id)
+    } catch (error) {
+      console.error('Error fetching location:', error);
+    }
+  }
   return (
     <div className="flex flex-col min-h-screen bg-white" dir="rtl">
       {/* Header */}
@@ -112,11 +142,11 @@ export default function Home() {
                 <img
                   src="/2.png"
                   alt="اسطوانات الغاز"
-                  width={500}
-                  height={500}
+                  width={300}
+                  height={300}
                   className="rounded-xl object-cover"
                 />
-                <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg">
+                <div className="absolute -bottom-6 -left-8 bg-white p-4 rounded-lg shadow-lg">
                   <div className="flex items-center gap-2">
                     <div className="bg-yellow-100 p-2 rounded-full">
                       <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />

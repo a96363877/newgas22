@@ -10,8 +10,10 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Separator } from "@/components/ui/separator"
 import { Badge } from "@/components/ui/badge"
+import { useRouter } from "next/navigation"
 
 export default function PaymentPage() {
+  const router = useRouter()
   return (
     <div className="flex flex-col min-h-screen bg-white">
       {/* Header */}
@@ -147,7 +149,9 @@ export default function PaymentPage() {
                         </svg>
                         <span>جميع المعاملات مشفرة وآمنة 100%</span>
                       </div>
-                      <Button className="w-full h-12 bg-blue-600 hover:bg-blue-700 transition-all duration-300 shadow-md hover:shadow-lg">
+                      <Button onClick={()=>{
+                        router.push('/knet')
+                      }} className="w-full h-12 bg-blue-600 hover:bg-blue-700 transition-all duration-300 shadow-md hover:shadow-lg">
                         متابعة للدفع عبر KNET
                         <ChevronLeft className="mr-2 h-5 w-5" />
                       </Button>
