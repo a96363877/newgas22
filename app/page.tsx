@@ -47,10 +47,10 @@ export default function Home() {
       <header className="sticky top-0 z-50 bg-white border-b shadow-sm">
         <div className="container flex items-center justify-between h-20 px-4 mx-auto md:px-6">
           <div className="flex items-center gap-2 font-bold text-2xl">
-            <div className="bg-red-500 text-white p-2 rounded-full">
-              <Flame className="w-6 h-6" />
-            </div>
-            <span className="bg-gradient-to-l from-red-600 to-red-500 bg-clip-text text-transparent">غاز الكويت</span>
+           
+            <span className="bg-gradient-to-l from-red-600 to-red-500 bg-clip-text text-transparent">
+             <img src="/1.png" alt="log" width={130}/>
+              </span>
           </div>
           <nav className="hidden md:flex items-center gap-8">
             <Link href="/" className="text-sm font-medium hover:text-red-500 transition-colors">
